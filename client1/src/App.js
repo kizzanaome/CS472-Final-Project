@@ -3,6 +3,8 @@ import iphone from './assets/images/iphone.webp'
 
 function App() {
   return (
+
+
     <div className="">
       <div>
         <img src={iphone} alt="product" width="250px"/>
