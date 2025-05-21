@@ -28,9 +28,12 @@ interface ProductProviderProps {
 
 export const ProductProvider: React.FC<ProductProviderProps> = ({ children }) => {
     const [productList, setProductList] = useState<any[]>([]);
+    const [loading, setLoading] = useState<boolean>(false);
+    const [error, setError] = useState<string | null>(null);
 
     const fetchProducts = async () => {
         try {
+            setLoading(true)
             const response = await fetch("http://localhost:5000/products");
             if (response.ok) {
                 const data = await response.json();
@@ -38,8 +41,16 @@ export const ProductProvider: React.FC<ProductProviderProps> = ({ children }) =>
                     setProductList(data)
                 }
             }
-        } catch (error) {
-            console.log("failed to fetch:", error)
+        } catch (err) {
+            if (err instanceof Error) {
+                setError(err.message)
+
+            } else {
+                setError("An unknown error occured.")
+            }
+
+        } finally {
+            setLoading(false);
         }
 
     }

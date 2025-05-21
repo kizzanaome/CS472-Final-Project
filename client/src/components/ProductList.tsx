@@ -1,7 +1,7 @@
 import { Product } from './Product'
 
 
-const Home = () => {
+const ProductList = () => {
     return (
         <div className="d-flex justify-content-between w-75 mx-auto">
             <Product />
@@ -9,4 +9,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default ProductList
