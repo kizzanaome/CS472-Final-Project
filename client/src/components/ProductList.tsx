@@ -10,17 +10,19 @@ const ProductList = ({ }) => {
         throw new Error("useProductContext must be used within a ProductProvider");
     }
 
-    const { productList } = context;
+    const { productList, loading, error } = context;
 
     return (
         <div className="d-flex justify-content-between w-75 mx-auto">
-            {/* <SearchPorduct> */}
-            {productList.map((item, key) => {
+            {loading && <p>Loading...</p>}
+            {productList && productList.map((item, key) => {
                 return <Product
                     key={key}
                     product={item}
                 />
             })}
+
+            {error && <p>{error}</p>}
         </div>
     )
 }
