@@ -1,46 +1,405 @@
 [
     {
         "id": 1,
-        "name": "LapTop",
-        "description": "Core i7 Dell LapTop",
+        "name": "Dell XPS 13",
+        "description": "13-inch laptop with InfinityEdge display",
         "category": [
             "electronics"
         ],
-        "price": 5000,
-        "dateAdded": "19-05-2025",
-        "averageRating": 50,
+        "price": 1200,
+        "dateAdded": "10-05-2025",
+        "averageRating": 4,
         "reviews": [
             {
                 "id": 1,
-                "author": "Naume Kizza",
-                "rating": 3
+                "author": "Alice",
+                "rating": 4
             },
             {
                 "id": 2,
-                "author": "John Doe",
+                "author": "Bob",
                 "rating": 4
             }
         ]
     },
     {
         "id": 2,
-        "name": "Server",
-        "description": "Core i7 Dell LapTop",
+        "name": "Sony WH-1000XM5",
+        "description": "Wireless Noise Canceling Headphones",
         "category": [
             "electronics"
         ],
-        "price": 5000,
-        "dateAdded": "19-05-2025",
-        "averageRating": 50,
+        "price": 399,
+        "dateAdded": "11-05-2025",
+        "averageRating": 5,
         "reviews": [
             {
                 "id": 1,
-                "author": "Naume Kizza",
+                "author": "Charlie",
+                "rating": 5
+            },
+            {
+                "id": 2,
+                "author": "Dave",
+                "rating": 5
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "MacBook Air M2",
+        "description": "Apple MacBook Air with M2 chip",
+        "category": [
+            "electronics"
+        ],
+        "price": 1300,
+        "dateAdded": "12-05-2025",
+        "averageRating": 5,
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Eve",
+                "rating": 5
+            },
+            {
+                "id": 2,
+                "author": "Frank",
+                "rating": 5
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Office Chair Ergonomic",
+        "description": "Adjustable desk chair with lumbar support",
+        "category": [
+            "furniture"
+        ],
+        "price": 250,
+        "dateAdded": "13-05-2025",
+        "averageRating": 3,
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Grace",
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Samsung Galaxy S24",
+        "description": "Latest Android smartphone by Samsung",
+        "category": [
+            "electronics"
+        ],
+        "price": 999,
+        "dateAdded": "14-05-2025",
+        "averageRating": 4,
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Heidi",
+                "rating": 4
+            },
+            {
+                "id": 2,
+                "author": "Ivan",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Nike Air Max",
+        "description": "Popular running shoes",
+        "category": [
+            "fashion"
+        ],
+        "price": 120,
+        "dateAdded": "14-05-2025",
+        "averageRating": 4,
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Judy",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Kindle Paperwhite",
+        "description": "E-reader with backlit display",
+        "category": [
+            "electronics"
+        ],
+        "price": 129,
+        "dateAdded": "15-05-2025",
+        "averageRating": 5,
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Karl",
+                "rating": 5
+            },
+            {
+                "id": 2,
+                "author": "Leo",
+                "rating": 5
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "HP Pavilion",
+        "description": "Affordable 15.6\" laptop",
+        "category": [
+            "electronics"
+        ],
+        "price": 600,
+        "dateAdded": "15-05-2025",
+        "averageRating": 3,
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Mia",
                 "rating": 3
             },
             {
                 "id": 2,
-                "author": "Craig D",
+                "author": "Noah",
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Logitech MX Master 3",
+        "description": "Advanced wireless mouse",
+        "category": [
+            "electronics"
+        ],
+        "price": 99,
+        "dateAdded": "16-05-2025",
+        "averageRating": 5,
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Oscar",
+                "rating": 5
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "iPad Air",
+        "description": "Apple tablet with M1 chip",
+        "category": [
+            "electronics"
+        ],
+        "price": 799,
+        "dateAdded": "16-05-2025",
+        "averageRating": 5,
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Pam",
+                "rating": 5
+            },
+            {
+                "id": 2,
+                "author": "Quinn",
+                "rating": 5
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Gaming Desk",
+        "description": "Large desk with RGB lighting",
+        "category": [
+            "furniture"
+        ],
+        "price": 300,
+        "dateAdded": "17-05-2025",
+        "averageRating": 4,
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Rick",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Apple Watch Series 9",
+        "description": "Smartwatch with fitness tracking",
+        "category": [
+            "electronics"
+        ],
+        "price": 499,
+        "dateAdded": "17-05-2025",
+        "averageRating": 4,
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Sam",
+                "rating": 4
+            },
+            {
+                "id": 2,
+                "author": "Tina",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Mechanical Keyboard",
+        "description": "RGB backlit gaming keyboard",
+        "category": [
+            "electronics"
+        ],
+        "price": 150,
+        "dateAdded": "17-05-2025",
+        "averageRating": 5,
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Uma",
+                "rating": 5
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Smart LED Bulbs",
+        "description": "WiFi-controlled RGB smart bulbs",
+        "category": [
+            "electronics"
+        ],
+        "price": 30,
+        "dateAdded": "18-05-2025",
+        "averageRating": 4,
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Victor",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Bluetooth Speaker",
+        "description": "Portable waterproof speaker",
+        "category": [
+            "electronics"
+        ],
+        "price": 79,
+        "dateAdded": "18-05-2025",
+        "averageRating": 5,
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Wendy",
+                "rating": 5
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Leather Wallet",
+        "description": "Hand-stitched minimalist wallet",
+        "category": [
+            "fashion"
+        ],
+        "price": 45,
+        "dateAdded": "18-05-2025",
+        "averageRating": 4,
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Xander",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Surface Laptop 5",
+        "description": "13.5” touchscreen laptop from Microsoft",
+        "category": [
+            "electronics"
+        ],
+        "price": 1100,
+        "dateAdded": "19-05-2025",
+        "averageRating": 4,
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Yasmin",
+                "rating": 4
+            },
+            {
+                "id": 2,
+                "author": "Zack",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "name": "4K Monitor",
+        "description": "27” 4K UHD monitor with HDR",
+        "category": [
+            "electronics"
+        ],
+        "price": 349,
+        "dateAdded": "19-05-2025",
+        "averageRating": 5,
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Adam",
+                "rating": 5
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Espresso Machine",
+        "description": "Semi-automatic coffee machine",
+        "category": [
+            "kitchen"
+        ],
+        "price": 299,
+        "dateAdded": "19-05-2025",
+        "averageRating": 5,
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Bella",
+                "rating": 5
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Wireless Charger",
+        "description": "Fast charging pad compatible with iPhone & Android",
+        "category": [
+            "electronics"
+        ],
+        "price": 40,
+        "dateAdded": "20-05-2025",
+        "averageRating": 4,
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Carlos",
                 "rating": 4
             }
         ]

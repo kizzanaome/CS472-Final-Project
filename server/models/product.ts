@@ -11,7 +11,7 @@ const filePath = path.resolve(__dirname, '../storage/products.json');
 
 
 
-export  interface ProductInterface {
+export interface ProductInterface {
     id: number,
     name: string,
     description: string,
@@ -61,6 +61,41 @@ export class Product implements ProductInterface {
         }
     }
 
+    static async fetchFilteredAndPaginated(page = 1, category?: string): Promise<{
+        products: ProductInterface[]
+        totalItems: number,
+        totalPages: number,
+        currentPage: number
+    }> {
+        const products = await this.readProducts();
+
+        let filtered = products;
+        if (category) {
+            filtered = filtered.filter(p => p.category.toLowerCase() === category.toLowerCase());
+        }
+        // Sort by dateAdded descending
+        filtered.sort((a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime());
+
+        // Paginate
+        const pageSize = 10;
+        const totalItems = filtered.length;
+        const totalPages = Math.ceil(totalItems / pageSize);
+        const currentPage = Math.max(1, Math.min(page, totalPages))
+
+        const startIndex = (page - 1) * pageSize;
+        const paginated =
+            currentPage > totalPages ? [] : filtered.slice(startIndex, startIndex + pageSize);
+
+
+        return {
+            products: paginated,
+            totalItems,
+            totalPages,
+            currentPage
+        }
+    }
+
+
 
     static async fetchAll(): Promise<ProductInterface[]> {
         return await this.readProducts();
@@ -82,7 +117,7 @@ export class Product implements ProductInterface {
         return foundProducts
     }
 
- 
+
 
 
 }

@@ -1,11 +1,234 @@
-{"reviews":[
+[
     {
         "id": 1,
         "productId": 1,
-        "author": "Naume Kizza",
-        "rating": 3
-
+        "author": "Alice",
+        "rating": 4,
+        "comment": "Very sleek and powerful.",
+        "date": "10-05-2025"
+    },
+    {
+        "id": 2,
+        "productId": 1,
+        "author": "Bob",
+        "rating": 4,
+        "comment": "Worth the price.",
+        "date": "10-05-2025"
+    },
+    {
+        "id": 1,
+        "productId": 2,
+        "author": "Charlie",
+        "rating": 5,
+        "comment": "Best noise cancellation!",
+        "date": "11-05-2025"
+    },
+    {
+        "id": 2,
+        "productId": 2,
+        "author": "Dave",
+        "rating": 5,
+        "comment": "Excellent sound quality.",
+        "date": "11-05-2025"
+    },
+    {
+        "id": 1,
+        "productId": 3,
+        "author": "Eve",
+        "rating": 5,
+        "comment": "Battery life is amazing.",
+        "date": "12-05-2025"
+    },
+    {
+        "id": 2,
+        "productId": 3,
+        "author": "Frank",
+        "rating": 5,
+        "comment": "Lightweight and fast.",
+        "date": "12-05-2025"
+    },
+    {
+        "id": 1,
+        "productId": 4,
+        "author": "Grace",
+        "rating": 3,
+        "comment": "Comfortable but bulky.",
+        "date": "13-05-2025"
+    },
+    {
+        "id": 1,
+        "productId": 5,
+        "author": "Heidi",
+        "rating": 4,
+        "comment": "Super sharp display.",
+        "date": "14-05-2025"
+    },
+    {
+        "id": 2,
+        "productId": 5,
+        "author": "Ivan",
+        "rating": 4,
+        "comment": "Smooth performance.",
+        "date": "14-05-2025"
+    },
+    {
+        "id": 1,
+        "productId": 6,
+        "author": "Judy",
+        "rating": 4,
+        "comment": "Good cushioning.",
+        "date": "14-05-2025"
+    },
+    {
+        "id": 1,
+        "productId": 7,
+        "author": "Karl",
+        "rating": 5,
+        "comment": "Perfect for travel.",
+        "date": "15-05-2025"
+    },
+    {
+        "id": 2,
+        "productId": 7,
+        "author": "Leo",
+        "rating": 5,
+        "comment": "Crisp and clear display.",
+        "date": "15-05-2025"
+    },
+    {
+        "id": 1,
+        "productId": 8,
+        "author": "Mia",
+        "rating": 3,
+        "comment": "Affordable, but slow.",
+        "date": "15-05-2025"
+    },
+    {
+        "id": 2,
+        "productId": 8,
+        "author": "Noah",
+        "rating": 3,
+        "comment": "Battery life could be better.",
+        "date": "15-05-2025"
+    },
+    {
+        "id": 1,
+        "productId": 9,
+        "author": "Oscar",
+        "rating": 5,
+        "comment": "Ergonomic and precise.",
+        "date": "16-05-2025"
+    },
+    {
+        "id": 1,
+        "productId": 10,
+        "author": "Pam",
+        "rating": 5,
+        "comment": "Love the M1 chip performance.",
+        "date": "16-05-2025"
+    },
+    {
+        "id": 2,
+        "productId": 10,
+        "author": "Quinn",
+        "rating": 5,
+        "comment": "Very fast and responsive.",
+        "date": "16-05-2025"
+    },
+    {
+        "id": 1,
+        "productId": 11,
+        "author": "Rick",
+        "rating": 4,
+        "comment": "Solid and wide desk.",
+        "date": "17-05-2025"
+    },
+    {
+        "id": 1,
+        "productId": 12,
+        "author": "Sam",
+        "rating": 4,
+        "comment": "Tracks workouts well.",
+        "date": "17-05-2025"
+    },
+    {
+        "id": 2,
+        "productId": 12,
+        "author": "Tina",
+        "rating": 4,
+        "comment": "Stylish and smart.",
+        "date": "17-05-2025"
+    },
+    {
+        "id": 1,
+        "productId": 13,
+        "author": "Uma",
+        "rating": 5,
+        "comment": "Tactile keys, perfect for typing.",
+        "date": "17-05-2025"
+    },
+    {
+        "id": 1,
+        "productId": 14,
+        "author": "Victor",
+        "rating": 4,
+        "comment": "Cool lighting effects.",
+        "date": "18-05-2025"
+    },
+    {
+        "id": 1,
+        "productId": 15,
+        "author": "Wendy",
+        "rating": 5,
+        "comment": "Loud and clear sound.",
+        "date": "18-05-2025"
+    },
+    {
+        "id": 1,
+        "productId": 16,
+        "author": "Xander",
+        "rating": 4,
+        "comment": "Nice leather texture.",
+        "date": "18-05-2025"
+    },
+    {
+        "id": 1,
+        "productId": 17,
+        "author": "Yasmin",
+        "rating": 4,
+        "comment": "Touch screen is responsive.",
+        "date": "19-05-2025"
+    },
+    {
+        "id": 2,
+        "productId": 17,
+        "author": "Zack",
+        "rating": 4,
+        "comment": "Keyboard feels great.",
+        "date": "19-05-2025"
+    },
+    {
+        "id": 1,
+        "productId": 18,
+        "author": "Adam",
+        "rating": 5,
+        "comment": "Crisp resolution.",
+        "date": "19-05-2025"
+    },
+    {
+        "id": 1,
+        "productId": 19,
+        "author": "Bella",
+        "rating": 5,
+        "comment": "Makes great espresso.",
+        "date": "19-05-2025"
+    },
+    {
+        "id": 1,
+        "productId": 20,
+        "author": "Carlos",
+        "rating": 4,
+        "comment": "Charges fast and reliably.",
+        "date": "20-05-2025"
     }
 ]
-
-}

@@ -58,16 +58,25 @@ export const ProductProvider: React.FC<ProductProviderProps> = ({ children }) =>
 
 
 
-    const fetchProducts = async () => {
+    const fetchProducts = async (page = 1, category?: string) => {
         try {
             setLoading(true)
-            const response = await fetch("http://localhost:3000/products");
+            let url = `http://localhost:3000/products?page=${page}`;
+            if (category) {
+                url += `&category=${encodeURIComponent(category)}`;
+            }
+
+            const response = await fetch(url);
             if (response.ok) {
                 const data = await response.json();
-                // console.log(data)
                 if (data) {
-                    setProductList(data)
+                    setProductList(data.products)
+                    setTotal(data.pagination.totalItems)
+                    setPage(data.pagination.currentPage);
+
                 }
+            } else {
+                throw new Error("Failed to fetch products")
             }
         } catch (err) {
             if (err instanceof Error) {
@@ -96,6 +105,7 @@ export const ProductProvider: React.FC<ProductProviderProps> = ({ children }) =>
             const results = await response.json();
             setProductList(results);
             setTotal(results.length);
+            setPage(1);
             setError(null);
         } catch (err) {
             if (err instanceof Error) {
@@ -112,10 +122,10 @@ export const ProductProvider: React.FC<ProductProviderProps> = ({ children }) =>
         if (searchQuery.trim()) {
             searchProducts(searchQuery);
         } else {
-            fetchProducts();
+            fetchProducts(page);
         }
     }
-        , [searchQuery])
+        , [searchQuery, page])
 
 
 
