@@ -14,6 +14,7 @@ const ProductList = ({ }) => {
 
     return (
         <div className="d-flex justify-content-between w-75 mx-auto">
+            {/* <SearchPorduct> */}
             {productList.map((item, key) => {
                 return <Product
                     key={key}
@@ -25,15 +26,6 @@ const ProductList = ({ }) => {
 }
 
 
-{/* <div>
-    <img src={iphone} alt="product" className='product-img' />
-    <h3>{product.name}</h3>
-    <p>{product.description}</p>
-    <p>{product.category}</p>
-    <p>{product.price}</p>
-    <p>{product.dateAdded}</p>
-    <p>{product.averageRating}</p>
-    <button className='btn btn-primary'>Review</button>
-</div> */}
+
 
 export default ProductList

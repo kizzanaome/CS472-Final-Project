@@ -1,5 +1,5 @@
 import iphone from '../assets/images/iphone.webp'
-import type { ProductInterface } from '../interfaces/ProductInterface';
+import type { ProductInterface } from '../types/ProductInterface';
 interface ProductProps {
     product: ProductInterface;
 }
