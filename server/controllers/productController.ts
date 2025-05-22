@@ -5,8 +5,23 @@ import { Review } from '../models/reviews.ts';
 
 
 export const getProducts = async (req: Request, res: Response) => {
-    const products = await Product.fetchAll();
-    res.status(200).json(products);
+    const page = parseInt(req.query.page as string) || 1;
+    const category = req.query.category as string | undefined;
+
+    try {
+        const result = await Product.fetchFilteredAndPaginated(page, category);
+        res.status(200).json({
+            products: result.products,
+            pagination: {
+                totalItems: result.totalItems,
+                totalPages: result.totalPages,
+                currentPage: result.currentPage
+            }
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Failed to fetch products' });
+    }
 }
 
 
@@ -31,11 +46,11 @@ export const getProductReviews = async (req: Request, res: Response) => {
     res.status(200).json(reviews);
 }
 
-export const save = async (req: Request, res: Response) => {
-    const prodReview = req.body;
-    const savedProd = new Review(null, prodReview.productId, prodReview.author, prodReview.rating, prodReview.comment, prodReview.date).save();
-    res.status(201).json(savedProd);
-}
+// export const save = async (req: Request, res: Response) => {
+//     const prodReview = req.body;
+//     const savedProd = new Review(null, prodReview.productId, prodReview.author, prodReview.rating, prodReview.comment, prodReview.date).save();
+//     res.status(201).json(savedProd);
+// }
 
 
 
