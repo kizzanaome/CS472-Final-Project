@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1,
+        "name": "LapTop",
+        "description": "Core i7 Dell LapTop",
+        "category": [
+            "electronics"
+        ],
+        "price": 5000,
+        "dateAdded": "19-05-2025",
+        "averageRating": 50,
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Naume Kizza",
+                "rating": 3
+            },
+            {
+                "id": 2,
+                "author": "John Doe",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Server",
+        "description": "Core i7 Dell LapTop",
+        "category": [
+            "electronics"
+        ],
+        "price": 5000,
+        "dateAdded": "19-05-2025",
+        "averageRating": 50,
+        "reviews": [
+            {
+                "id": 1,
+                "author": "Naume Kizza",
+                "rating": 3
+            },
+            {
+                "id": 2,
+                "author": "Craig D",
+                "rating": 4
+            }
+        ]
+    }
+]

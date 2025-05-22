@@ -1,4 +1,4 @@
-import { createContext, useState, type ReactNode, useEffect } from "react";
+import { createContext, useState, type ReactNode, useEffect, useContext } from "react";
 
 interface Product {
     id: number,
@@ -17,10 +17,13 @@ interface Product {
 
 //define the inteface for the context
 interface ProductContextType {
-    productList: any[];
+    productList: Product[];
     setProductList: React.Dispatch<React.SetStateAction<Product[]>>
 }
-const ProductContext = createContext<ProductContextType | null>(null);
+const ProductContext = createContext<ProductContextType>({
+    productList: [],
+    setProductList: () => { }, // no-op function
+  });
 
 interface ProductProviderProps {
     children: ReactNode
@@ -34,9 +37,10 @@ export const ProductProvider: React.FC<ProductProviderProps> = ({ children }) =>
     const fetchProducts = async () => {
         try {
             setLoading(true)
-            const response = await fetch("http://localhost:5000/products");
+            const response = await fetch("http://localhost:3000/products");
             if (response.ok) {
                 const data = await response.json();
+                console.log(data)
                 if (data) {
                     setProductList(data)
                 }
@@ -65,3 +69,5 @@ export const ProductProvider: React.FC<ProductProviderProps> = ({ children }) =>
         </ProductContext.Provider>
     )
 }
+
+export const useProductContext = () => useContext(ProductContext);
