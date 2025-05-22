@@ -16,14 +16,20 @@ export function SearchInput() {
         const timeout = setTimeout(() => {
             // only updates after user stops typing
             setSearchQuery(inputValue);
-        }, 100); 
+        }, 100);
         // cleanup on next keystroke
         return () => clearTimeout(timeout);
     }, [inputValue]);
 
     return (
-        <div>
-            <input name="Search product by name" value={searchQuery} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)} />
+        <div className="d-flex align-items-center w-50">
+            {/* <label htmlFor="search" className="form-label mr-3">Search:</label> */}
+            <input className="form-control ml-3"
+                id="search"
+                name="Search product by name"
+                placeholder="Search product..."
+                value={searchQuery}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)} />
         </div>
     )
 }

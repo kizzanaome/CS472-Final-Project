@@ -1,4 +1,5 @@
 import { createContext, useState, type ReactNode, useEffect, useContext } from "react";
+import type { ReviewType } from "../types/ProductInterface";
 
 interface Product {
     id: number,
@@ -7,7 +8,8 @@ interface Product {
     category: string[],
     price: number,
     dateAdded: Date,
-    averageRating: number
+    averageRating: number,
+    reviews: ReviewType[]
 
 }
 

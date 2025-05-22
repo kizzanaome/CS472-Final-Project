@@ -13,14 +13,17 @@ const ProductList = ({ }) => {
     const { productList, loading, error } = context;
 
     return (
-        <div className="d-flex justify-content-between w-75 mx-auto">
+
+
+
+        <div className="row g-4">
             {loading && <p>Loading...</p>}
-            {productList && productList.map((item, key) => {
-                return <Product
+            {productList && productList.map((item, key) => (
+                <Product
                     key={key}
                     product={item}
                 />
-            })}
+            ))}
 
             {error && <p>{error}</p>}
         </div>
