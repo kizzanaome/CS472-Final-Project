@@ -1,3 +1,102 @@
-.product-img{
-    width: 350px;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    font-family: "Inter", sans-serif !important;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* CUSTOM CSS TO OVERRIDE BOOTSTRAP */
+
+a {
+    color: #000 !important;
+    text-decoration: none !important;
+    transition: .2s
+}
+
+a:hover {
+    color: #f68b1e !important;
+    transition: .2s
+}
+
+.btn-primary {
+    background: #f68b1e !important;
+    border: 1px solid #f68b1e !important;
+}
+
+.btn-primary:hover {
+    background: #dd7b18 !important;
+}
+
+.btn-outline-primary {
+    color: #f68b1e !important;
+    border: 1px solid #f68b1e !important;
+}
+
+.btn-outline-primary:hover {
+    color: #fff !important;
+    background: #f68b1e !important;
+}
+
+h4.text-primary {
+    color: #f68b1e !important;
+}
+
+/* CSS FOR THE PRODUCT CARD */
+
+.favorite {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.card-image-box {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image {
+    object-fit: fill;
+    object-position: center;
+    width: 100%;
+}
+
+.card-product-title {
+    font-weight: 600;
+}
+
+.bi-star-fill {
+    color: #f68b1e
+}
+
+/* CSS FOR THE SINGLE PRODUCT */
+
+.product-image-box {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-image {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+/* CSS FOR REVIEWS */
+
+.review {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
+}
+
+.review:last-child {
+    border-bottom: none;
 }
