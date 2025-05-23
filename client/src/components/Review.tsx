@@ -2,16 +2,13 @@ import { useState } from "react";
 import type { ReviewType } from "../types/ProductInterface";
 import { EditReview } from "./EditReview";
 import { useProductContext } from "../context/ProductContext";
-import { useParams } from "react-router";
+
 type ReviewProp = {
     productId: string
     review: ReviewType;
 };
 
 export function Review({ productId, review }: ReviewProp) {
-
-    const { id } = useParams<{ id: string }>();
-
 
     const { fetchProducts } = useProductContext();
 

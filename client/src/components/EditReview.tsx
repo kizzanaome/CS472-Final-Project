@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useProductContext } from "../context/ProductContext";
 import type { ReviewType } from "../types/ProductInterface";
-import { useParams } from "react-router";
 
 interface ReviewProps {
     productId: string | undefined
@@ -10,11 +9,6 @@ interface ReviewProps {
 }
 export function EditReview({productId ,reviewData, setViewEdit }: ReviewProps) {
     const { fetchProducts } = useProductContext();
-
-    console.log(reviewData)
-    console.log(productId)
-
-
 
     const [formData, setFormData] = useState({
         authorName: reviewData.author,
