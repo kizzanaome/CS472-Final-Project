@@ -4,6 +4,9 @@ A simple products application consisting of:
 - server: a simple backend RESTful API built with Node.js + Express that supports READ operations for products and CRUD operations (Create, Read, Update, Delete) for reviews. It uses a JSON file as a lightweight database, making it ideal for prototyping.
 - client: a modern frontend application built with React, TypeScript, and Vite, designed to fetch and display products and their associated reviews from the server
 
+Hosted FrontEnd - https://final-products-client.netlify.app
+Hosted BackEnd -  https://server-u83x.onrender.com
+
 
 ## Features
 
