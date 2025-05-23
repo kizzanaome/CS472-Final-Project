@@ -5,8 +5,9 @@ import type { ReviewType } from "../types/ProductInterface";
 interface ReviewProps {
     id: string
     reviewData: ReviewType;
+    setViewEdit: React.MouseEventHandler
 }
-export function EditReview({ reviewData, id }: ReviewProps) {
+export function EditReview({ reviewData, id, setViewEdit }: ReviewProps) {
     const { fetchProducts } = useProductContext();
 
 
@@ -57,7 +58,7 @@ export function EditReview({ reviewData, id }: ReviewProps) {
 
     return (
         <div>
-            <div className="mt-5">
+            <div className="mt-5 mb-4 p-4 rounded border border-warning">
                 <h4>Edit a Review</h4>
                 <form onSubmit={handleEdit}>
                     <div className="mb-3">
@@ -94,6 +95,8 @@ export function EditReview({ reviewData, id }: ReviewProps) {
                         </textarea>
                     </div>
                     <button type="submit" className="btn btn-outline-primary btn-sm">Submit Updated Review</button>
+                    <button onClick={setViewEdit} className="btn btn-outline-dark ms-2 btn-sm">close</button>
+
                 </form>
             </div>
         </div>

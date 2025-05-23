@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import type { ProductInterface } from '../types/ProductInterface';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useProductContext } from '../context/ProductContext';
 import { Reviews } from './ProductReviews';
 import placeholder from '../assets/images/placeholder_img3.png'
@@ -8,7 +8,7 @@ import placeholder from '../assets/images/placeholder_img3.png'
 
 function ProductDetails() {
     const { id } = useParams<{ id: string }>();
-    const { productList, fetchProducts} = useProductContext();
+    const { productList, fetchProducts } = useProductContext();
 
     const [product, setProduct] = useState<ProductInterface | null>(null);
     const [loading, setLoading] = useState(false);
@@ -19,6 +19,13 @@ function ProductDetails() {
         rating: '5',
         comment: '',
     });
+
+    const sectionRef = useRef<HTMLDivElement>(null);
+
+    const handleScroll = () => {
+        sectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
 
     const handleInputChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -104,7 +111,6 @@ function ProductDetails() {
                     <div className="mb-3">
                         <i className="bi bi-star-fill"></i> {product.averageRating}
                     </div>
-
                     <p>{product.description}</p>
 
                     <h4 className="text-primary mb-3">${product.price}</h4>
@@ -119,7 +125,8 @@ function ProductDetails() {
                         </li>
                     </ul>
 
-                    <button className="btn btn-outline-primary btn-sm">Add Review</button>
+                    <button onClick={handleScroll} className="btn btn-outline-primary btn-sm">Add Review</button>
+                    
 
                 </div>
             </div>
@@ -134,7 +141,7 @@ function ProductDetails() {
             </div>
 
 
-            <div className="mt-5">
+            <div ref={sectionRef} className="mt-5">
                 <h4>Leave a Review</h4>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">
