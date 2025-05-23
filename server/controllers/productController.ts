@@ -46,11 +46,33 @@ export const getProductReviews = async (req: Request, res: Response) => {
     res.status(200).json(reviews);
 }
 
-// export const save = async (req: Request, res: Response) => {
-//     const prodReview = req.body;
-//     const savedProd = new Review(null, prodReview.productId, prodReview.author, prodReview.rating, prodReview.comment, prodReview.date).save();
-//     res.status(201).json(savedProd);
-// }
+export const addProductReview = async (req: Request, res: Response) => {
+    const prodReview = req.body;
+    const newReview = new Review(prodReview.productId, prodReview.author, prodReview.rating, prodReview.comment, prodReview.date)
+    const savedReview = await newReview.save(Number(req.params.productId));
+    res.status(201).json(savedReview);
+}
+
+export const updateProductReview = async (req: Request, res: Response) => {
+    try {
+        const { productId, id } = req.params;
+        const updatedData = req.body;
+        const updatedReview = await Review.updateReview(Number(productId), Number(id), updatedData);
+        res.status(200).json(updatedReview);
+    } catch (error) {
+        res.status(400).json({ error: error instanceof Error ? error.message : 'Update failed' });
+    }
+};
+
+export const deleteProductReview = async (req: Request, res: Response) => {
+    try {
+        const { productId, id } = req.params;
+        await Review.deleteReview(Number(productId), Number(id));
+        res.status(204).send(); 
+    } catch (error) {
+        res.status(400).json({ error: error instanceof Error ? error.message : 'Delete failed' });
+    }
+};
 
 
 

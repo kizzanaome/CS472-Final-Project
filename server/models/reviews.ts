@@ -10,7 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const filePath = path.resolve(__dirname, '../storage/products.json');
 
-export  interface ProductInterface {
+export interface ProductInterface {
     id: number,
     name: string,
     description: string,
@@ -23,7 +23,7 @@ export  interface ProductInterface {
 
 
 export interface ReviewInterface {
-    id: number,
+    id?: number,
     productId: number,
     author: string,
     rating: string,
@@ -33,27 +33,15 @@ export interface ReviewInterface {
 
 
 
-export interface ProductInterface {
-    id: number,
-    name: string,
-    description: string,
-    category: string,
-    price: number,
-    dateAdded: Date,
-    averageRating: number,
-    reviews?: ReviewInterface[];
-}
-
 export class Review implements ReviewInterface {
-    public id: number;
+    public id?: number;
     public productId: number;
     public author: string;
     public rating: string;
     public comment: string;
     public date: Date;
 
-    constructor(id: number, productId: number, author: string, rating: string, comment: string, date: Date) {
-        this.id = id;
+    constructor(productId: number, author: string, rating: string, comment: string, date: Date) {
         this.productId = productId;
         this.author = author;
         this.rating = rating;
@@ -73,7 +61,7 @@ export class Review implements ReviewInterface {
     }
 
     static async fetchProductReviews(productId: number): Promise<ReviewInterface[]> {
-        const products  = await this.readReviews();
+        const products = await this.readReviews();
         // const index = products.findIndex(p => p.id === productId);
         // if (index > -1) {
         //     return products[index].reviews;
@@ -90,30 +78,65 @@ export class Review implements ReviewInterface {
 
     }
 
-    async  writeProducts(products: ProductInterface[]): Promise<void> {
-    await fs.writeFile(filePath, JSON.stringify(products, null, 2));
-      }
+    static async writeProducts(products: ProductInterface[]): Promise<void> {
+        await fs.writeFile(filePath, JSON.stringify(products, null, 2));
+    }
 
-     async save(): Promise<this> {
+    async save(productId: Number): Promise<ReviewInterface> {
 
-        const products = await   Review.readReviews();
-        // this.id = Math.random();
-        // products.push(this);
-        // return this;
-        this.id = Number(Math.random());
+        const products = await Review.readReviews();
+        //get product id
+        const product = products.find(p => p.id === productId);
+        if (!product) {
+            throw new Error('Product not found');
+        }
+
+        const reviews = product.reviews ?? [];
+
+        const maxId = reviews.reduce((max, r) => (r.id && r.id > max ? r.id : max), 0);
+        this.id = maxId + 1;
         this.date = new Date();
-        products.push(this);
-        await Review.writeProducts(products); 
+        reviews.push(this);
+        product.reviews = reviews
+        await Review.writeProducts(products);
         return this;
     }
 
-// this.id = Date.now(); // or Math.random(), just make sure it's unique
-// this.date = new Date(); // if not already set
-// product.reviews.push(this);
+    static async updateReview(productId: number, reviewId: number, updatedData: Partial<ReviewInterface>): Promise<ReviewInterface> {
 
-// await Review.writeProducts(products); // save updated products array
+        const products = await Review.readReviews();
+        //get product id
+        const product = products.find(p => p.id === productId);
+        if (!product || !product.reviews) throw new Error("Product or reviews not found");
 
-// return this;
+        const reviewIndex = product.reviews.findIndex(r => r.id === reviewId);
+        if (reviewIndex === -1) throw new Error("Review not found");
+
+        product.reviews[reviewIndex] = {
+            ...product.reviews[reviewIndex],
+            ...updatedData,
+            id: reviewId,
+            productId,
+            date: new Date(),
+        };
+
+        await Review.writeProducts(products);
+        return product.reviews[reviewIndex];
+    }
+
+    static async deleteReview(productId: number, reviewId: number): Promise<void> {
+        const products = await this.readReviews();
+        const product = products.find(p => p.id === productId);
+        if (!product || !product.reviews) throw new Error("Product or reviews not found");
+
+        const reviewIndex = product.reviews.findIndex(r => r.id === reviewId);
+        if (reviewIndex === -1) throw new Error("Review not found");
+
+        product.reviews.splice(reviewIndex, 1); // remove review
+        await this.writeProducts(products);
+    }
+
+
 
 
 
