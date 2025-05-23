@@ -9,7 +9,7 @@ interface Product {
     price: number,
     dateAdded: Date,
     averageRating: number,
-    reviews: ReviewType[]
+    reviews: ReviewType[],
 
 }
 
@@ -29,6 +29,8 @@ interface ProductContextType {
     setPage: (page: number) => void;
     total: number;
     setTotal: (total: number) => void;
+    fetchProducts: () => void;
+
 }
 const ProductContext = createContext<ProductContextType>({
     productList: [],
@@ -40,8 +42,8 @@ const ProductContext = createContext<ProductContextType>({
     page: 1,
     setPage: () => { },
     total: 0,
-    setTotal: () => { }
-
+    setTotal: () => { },
+    fetchProducts: () => { }
 
 });
 
@@ -143,7 +145,8 @@ export const ProductProvider: React.FC<ProductProviderProps> = ({ children }) =>
             page,
             setPage,
             total,
-            setTotal
+            setTotal,
+            fetchProducts
         }}>
             {children}
         </ProductContext.Provider>

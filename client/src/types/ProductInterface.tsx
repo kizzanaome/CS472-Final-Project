@@ -15,7 +15,7 @@ export type ReviewType = {
     id: string;
     productId: string;
     author: string;
-    rating: number;
+    rating: string;
     comment: string;
     date: string;
   };

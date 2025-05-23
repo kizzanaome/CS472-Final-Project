@@ -2,18 +2,63 @@ import { useParams } from 'react-router-dom';
 import type { ProductInterface } from '../types/ProductInterface';
 import { useEffect, useState } from 'react';
 import { useProductContext } from '../context/ProductContext';
-import iphone from '../assets/images/iphone.webp'
 import { Reviews } from './ProductReviews';
 import placeholder from '../assets/images/placeholder_img3.png'
 
 
 function ProductDetails() {
     const { id } = useParams<{ id: string }>();
-    const { productList } = useProductContext();
+    const { productList, fetchProducts} = useProductContext();
 
     const [product, setProduct] = useState<ProductInterface | null>(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
+
+    const [reviewData, setReviewData] = useState({
+        authorName: '',
+        rating: '5',
+        comment: '',
+    });
+
+    const handleInputChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    ) => {
+        const { name, value } = e.target;
+        setReviewData(prev => ({
+            ...prev,
+            [name]: value,
+        }));
+    };
+
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        console.log(reviewData);
+        try {
+            const response = await fetch(`http://localhost:3000/products/${id}/reviews`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(reviewData),
+            });
+            if (!response.ok) {
+                throw new Error('Failed to submit review');
+            }
+            const data = await response.json();
+            console.log('Review submitted:', data);
+            alert('Review submitted successfully!');
+            setReviewData({ authorName: '', rating: '5', comment: '' });
+            fetchProducts()
+
+        } catch (err) {
+            console.error('Error:', err);
+            alert('Error submitting review.');
+
+        }
+    };
+
+
 
     useEffect(() => {
         if (!id) return;
@@ -46,7 +91,7 @@ function ProductDetails() {
     if (!product) return <p>Product not found.</p>;
 
     return (
-        <>
+        <div className='container py-5'>
             <div className="row">
                 <div className="col-md-6 text-center">
                     <div className='product-image-box'>
@@ -68,7 +113,10 @@ function ProductDetails() {
                         {product?.category?.length > 1 ? product.category?.join(', ') : product?.category}
                         <li><strong>Category:</strong> {product?.category?.length > 1 ? product.category?.join(', ') : product?.category}</li>
 
-                        <li><strong>Date Added:</strong> {new Date(product.dateAdded).toLocaleDateString()}</li>
+                        <li><strong>Date Added:</strong>
+
+                            {new Date(product.dateAdded).toLocaleDateString()}
+                        </li>
                     </ul>
 
                     <button className="btn btn-outline-primary btn-sm">Add Review</button>
@@ -88,20 +136,22 @@ function ProductDetails() {
 
             <div className="mt-5">
                 <h4>Leave a Review</h4>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label htmlFor="author" className="form-label">Name: </label>
-                        <input type="text" className="form-control" id="author" placeholder="Enter your name" />
+                        <input type="text" className="form-control" id="author" placeholder="Enter your name" name="authorName"
+                            value={reviewData.authorName}
+                            onChange={handleInputChange}
+                        />
                     </div>
-
-                    {/* author
-                    productid
-                    Rating
-                    comment */}
-
                     <div className="mb-3">
                         <label htmlFor="reviewRating" className="form-label">Rating</label>
-                        <select className="form-select" id="reviewRating">
+                        <select
+                            className="form-select" id="reviewRating"
+                            name="rating"
+                            value={reviewData.rating}
+                            onChange={handleInputChange}
+                        >
                             <option value="5"><i className="bi bi-star-fill"></i> 5.0</option>
                             <option value="4"><i className="bi bi-star-fill"></i> 4.0</option>
                             <option value="3"><i className="bi bi-star-fill"></i> 3.0</option>
@@ -112,13 +162,18 @@ function ProductDetails() {
 
                     <div className="mb-3">
                         <label htmlFor="reviewComment" className="form-label">Review</label>
-                        <textarea className="form-control" id="reviewComment" rows={4} placeholder="Write your experience..."></textarea>
+                        <textarea className="form-control" id="reviewComment" rows={4}
+                            value={reviewData.comment}
+                            name="comment"
+                            placeholder="Write your experience..."
+                            onChange={handleInputChange}
+                        >
+                        </textarea>
                     </div>
-
                     <button type="submit" className="btn btn-outline-primary btn-sm">Submit Review</button>
                 </form>
             </div>
-        </>
+        </div>
 
     );
 }

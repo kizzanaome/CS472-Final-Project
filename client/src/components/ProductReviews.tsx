@@ -13,6 +13,7 @@ export function Reviews({ reviews }: ReviewProps) {
                     <Review
                         key={key}
                         review={item}
+                        id={item.productId}
                     />
                 )
             }
