@@ -79,21 +79,22 @@ The app will start at http://localhost:5173 by default.
 
 Products Endpoints: Read
 
-| Method | Endpoint            | Description          |
-| ------ | ------------------- | -------------------- |
-| GET    | `/api/products`     | Get all products     |
-| GET    | `/api/products/:id` | Get a single product |
+| Method | Endpoint              | Description          |
+| ------ | --------------------- | -------------------- |
+| GET    | `/products`           | Get all products     |
+| GET    | `/products/:id`       | Get a single product |
+| GET    | `/products/search?q=` | Search for a product |
 
 
 Reviews CRUD (linked to Products)
 
 | Method | Endpoint                           | Description                   |
 | ------ | ---------------------------------- | ----------------------------- |
-| GET    | `/api/products/:productId/reviews` | Get all reviews for a product |
-| POST   | `/api/products/:productId/reviews` | Add a review to a product     |
-| PUT    | `/api/reviews/:reviewId`           | Update a review               |
-| DELETE | `/api/reviews/:reviewId`           | Delete a review               |
+| GET    | `/products/:id/reviews`            | Get all reviews for a product |
+| POST   | `/products/:id/reviews`            | Add a review to a product     |
+| PUT    | `/products/:productId/reviews/:id` | Update a review               |
+| DELETE | `/products/:productId/reviews/:id` | Delete a review               |
 
 
-by: Naume Kizza
+by: Naome Kizza
 GitHub: @kizzanaome
