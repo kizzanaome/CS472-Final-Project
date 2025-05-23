@@ -28,17 +28,25 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalItems,
 
     return (
         <nav>
-            <button onClick={handlePrev} disabled={currentPage === 1}>Prev</button>
-            {pages.map(p => (
-                <button
-                    key={p}
-                    onClick={() => onPageChange(p)}
-                    style={{ fontWeight: p === currentPage ? 'bold' : 'normal' }}
-                >
-                    {p}
-                </button>
-            ))}
-            <button onClick={handleNext} disabled={currentPage === totalPages}>Next</button>
+            <ul className="pagination justify-content-center">
+                <li className={`page-item ${currentPage === 1 && "disabled"}`}>
+                    <a className="page-link" href="#" onClick={handlePrev} tabIndex={-1}>Previous</a>
+                </li>
+                {pages.map(p => (
+                    <li className={`page-item ${currentPage === p && "active"}`}>
+                        <a
+                            key={p}
+                            className="page-link"
+                            onClick={() => onPageChange(p)}
+                        >
+                            {p}
+                        </a>
+                    </li>
+                ))}
+                <li className={`page-item ${currentPage === totalPages && "disabled"}`}>
+                    <a className="page-link" href="#" onClick={handleNext}>Next</a>
+                </li>
+            </ul>
         </nav>
     );
 };

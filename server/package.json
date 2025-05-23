@@ -5,12 +5,14 @@
   "main": "App.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn --transpile-only App.ts",
+    "build": "tsc",
     "start": "nodemon App.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0"

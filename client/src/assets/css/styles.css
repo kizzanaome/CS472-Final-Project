@@ -100,3 +100,16 @@ h4.text-primary {
 .review:last-child {
     border-bottom: none;
 }
+
+/* CSS FOR PAGINATION */
+
+.active {
+    color: #fff !important;
+    background: #f68b1e !important;
+}
+
+.active>.page-link {
+    color: #fff !important;
+    background-color: #f68b1e !important;
+    border: 1px solid #f68b1e !important;
+}

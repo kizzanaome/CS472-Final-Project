@@ -6,9 +6,11 @@ import { fileURLToPath } from 'url';
 
 
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const filePath = path.resolve(__dirname, '../storage/products.json');
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
+// const filePath = path.resolve(__dirname, '../storage/products.json');
+const filePath = path.join(__dirname, '../storage/products.json');
+
 
 export interface ProductInterface {
     id: number,

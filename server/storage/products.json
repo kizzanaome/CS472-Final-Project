@@ -11,14 +11,6 @@
     "averageRating": 4,
     "reviews": [
       {
-        "id": 2,
-        "productId": 1,
-        "author": "Bob",
-        "rating": 4,
-        "comment": "Worth the price.",
-        "date": "10-05-2025"
-      },
-      {
         "id": 3,
         "rating": "5",
         "comment": "This is an awsome product",
@@ -42,15 +34,7 @@
     "price": 399,
     "dateAdded": "11-05-2025",
     "averageRating": 5,
-    "reviews": [
-      {
-        "id": 3,
-        "productId": 2,
-        "rating": "4",
-        "comment": "These are really good headsets",
-        "date": "2025-05-23T01:44:56.600Z"
-      }
-    ]
+    "reviews": []
   },
   {
     "id": 3,

@@ -1,7 +1,7 @@
 import express from 'express';
 import type { Request, Response } from 'express';
-import { Product } from '../models/product.ts';
-import { Review } from '../models/reviews.ts';
+import { Product } from '../models/product';
+import { Review } from '../models/reviews';
 
 
 export const getProducts = async (req: Request, res: Response) => {
