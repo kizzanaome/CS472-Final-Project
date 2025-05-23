@@ -1,14 +1,19 @@
 import { useState } from "react";
 import { useProductContext } from "../context/ProductContext";
 import type { ReviewType } from "../types/ProductInterface";
+import { useParams } from "react-router";
 
 interface ReviewProps {
-    id: string
+    productId: string | undefined
     reviewData: ReviewType;
     setViewEdit: React.MouseEventHandler
 }
-export function EditReview({ reviewData, id, setViewEdit }: ReviewProps) {
+export function EditReview({productId ,reviewData, setViewEdit }: ReviewProps) {
     const { fetchProducts } = useProductContext();
+
+    console.log(reviewData)
+    console.log(productId)
+
 
 
     const [formData, setFormData] = useState({
@@ -31,12 +36,15 @@ export function EditReview({ reviewData, id, setViewEdit }: ReviewProps) {
     const handleEdit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            const response = await fetch(`http://localhost:3000/products/${id}/reviews/${reviewData.id}`, {
+            const response = await fetch(`http://localhost:3000/products/${productId}/reviews/${reviewData.id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({...formData}),
+                body: JSON.stringify({
+                    ...formData,
+                    productId: productId
+                }),
             });
             if (!response.ok) {
                 throw new Error('Failed to submit review');

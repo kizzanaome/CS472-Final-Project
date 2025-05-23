@@ -2,6 +2,7 @@ import type { ReviewType } from "../types/ProductInterface";
 import { Review } from "./Review";
 
 type ReviewProps = {
+    id: string | undefined;
     reviews: ReviewType[];
 };
 
@@ -13,7 +14,7 @@ export function Reviews({ reviews }: ReviewProps) {
                     <Review
                         key={key}
                         review={item}
-                        id={item.productId}
+                        productId={item.productId}
                     />
                 )
             }

@@ -126,16 +126,17 @@ function ProductDetails() {
                     </ul>
 
                     <button onClick={handleScroll} className="btn btn-outline-primary btn-sm">Add Review</button>
-                    
+
 
                 </div>
             </div>
 
 
 
-            {product.reviews.length!=0 && <div className="mt-4">
+            {product?.reviews?.length != 0 && <div className="mt-4">
                 <h4 className='mb-4'>Product Reviews</h4>
                 <Reviews
+                    id={id}
                     reviews={product.reviews}
                 />
             </div>}

@@ -2,12 +2,16 @@ import { useState } from "react";
 import type { ReviewType } from "../types/ProductInterface";
 import { EditReview } from "./EditReview";
 import { useProductContext } from "../context/ProductContext";
+import { useParams } from "react-router";
 type ReviewProp = {
-    id: string
+    productId: string
     review: ReviewType;
 };
 
-export function Review({ review, id }: ReviewProp) {
+export function Review({ productId, review }: ReviewProp) {
+
+    const { id } = useParams<{ id: string }>();
+
 
     const { fetchProducts } = useProductContext();
 
@@ -17,15 +21,13 @@ export function Review({ review, id }: ReviewProp) {
         if (!confirmDelete) return;
 
         try {
-            const response = await fetch(`http://localhost:3000/products/${id}/reviews/${reviewId}`, {
+            const response = await fetch(`http://localhost:3000/products/${productId}/reviews/${reviewId}`, {
                 method: 'DELETE',
             });
 
-            console.log(response)
-
-            // if (!response.ok) {
-            //     throw new Error('Failed to delete review');
-            // }
+            if (!response.ok) {
+                throw new Error('Failed to delete review');
+            }
 
             const data = await response.json();
             console.log('Review deleted:', data);
@@ -63,7 +65,7 @@ export function Review({ review, id }: ReviewProp) {
 
 
             {viewEdit && <EditReview
-                id={id}
+                productId={productId}
                 reviewData={review}
                 setViewEdit={() => setViewEdit(!viewEdit)}
 

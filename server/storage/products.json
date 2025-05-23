@@ -12,12 +12,14 @@
     "reviews": [
       {
         "id": 3,
+        "author": "Esther",
         "rating": "5",
         "comment": "This is an awsome product",
         "date": "2025-05-23T02:15:04.075Z"
       },
       {
         "id": 4,
+        "author": "Norah",
         "rating": "3",
         "comment": "Product is good but not good enough",
         "date": "2025-05-23T02:17:14.613Z"
@@ -46,7 +48,22 @@
     "price": 1300,
     "dateAdded": "12-05-2025",
     "averageRating": 5,
-    "reviews": []
+    "reviews": [
+      {
+        "author": "Grace",
+        "rating": "4",
+        "comment": "This macbook is really nice",
+        "date": "2025-05-23T05:55:50.396Z",
+        "id": 1
+      },
+      {
+        "author": "Alice",
+        "rating": 4,
+        "comment": "Good Porject.",
+        "date": "2025-05-23T06:10:33.733Z",
+        "id": 2
+      }
+    ]
   },
   {
     "id": 4,
@@ -132,24 +149,7 @@
     "price": 600,
     "dateAdded": "15-05-2025",
     "averageRating": 3,
-    "reviews": [
-      {
-        "id": 1,
-        "productId": 8,
-        "author": "Mia",
-        "rating": 3,
-        "comment": "Affordable, but slow.",
-        "date": "15-05-2025"
-      },
-      {
-        "id": 2,
-        "productId": 8,
-        "author": "Noah",
-        "rating": 3,
-        "comment": "Battery life could be better.",
-        "date": "15-05-2025"
-      }
-    ]
+    "reviews": []
   },
   {
     "id": 9,
@@ -172,6 +172,7 @@
       },
       {
         "id": 2,
+        "author": "Oscar",
         "rating": "5",
         "productId": 9,
         "comment": "Its a good product",

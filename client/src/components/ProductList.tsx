@@ -13,9 +13,6 @@ const ProductList = ({ }) => {
     const { productList, loading, error } = context;
 
     return (
-
-
-
         <div className="row g-4">
             {loading && <p>Loading...</p>}
             {productList && productList.map((item, key) => (
@@ -24,7 +21,6 @@ const ProductList = ({ }) => {
                     product={item}
                 />
             ))}
-
             {error && <p>{error}</p>}
         </div>
     )
