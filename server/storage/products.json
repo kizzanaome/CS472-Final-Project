@@ -1,494 +1,521 @@
 [
-    {
+  {
+    "id": 1,
+    "name": "Dell XPS 13",
+    "description": "13-inch laptop with InfinityEdge display",
+    "category": [
+      "electronics"
+    ],
+    "price": 1200,
+    "dateAdded": "10-05-2025",
+    "averageRating": 4,
+    "reviews": [
+      {
         "id": 1,
-        "name": "Dell XPS 13",
-        "description": "13-inch laptop with InfinityEdge display",
-        "category": [
-            "electronics"
-        ],
-        "price": 1200,
-        "dateAdded": "10-05-2025",
-        "averageRating": 4,
-        "reviews": [
-            {
-                "id": 1,
-                "productId": 1,
-                "author": "Alice",
-                "rating": 4,
-                "comment": "Very sleek and powerful.",
-                "date": "10-05-2025"
-            },
-            {
-                "id": 2,
-                "productId": 1,
-                "author": "Bob",
-                "rating": 4,
-                "comment": "Worth the price.",
-                "date": "10-05-2025"
-            }
-        ]
-    },
-    {
+        "productId": 1,
+        "author": "Alice",
+        "rating": 4,
+        "comment": "Good Porject.",
+        "date": "2025-05-23T03:19:13.493Z"
+      },
+      {
         "id": 2,
-        "name": "Sony WH-1000XM5",
-        "description": "Wireless Noise Canceling Headphones",
-        "category": [
-            "electronics"
-        ],
-        "price": 399,
-        "dateAdded": "11-05-2025",
-        "averageRating": 5,
-        "reviews": [
-            {
-                "id": 1,
-                "productId": 2,
-                "author": "Charlie",
-                "rating": 5,
-                "comment": "Best noise cancellation!",
-                "date": "11-05-2025"
-            },
-            {
-                "id": 2,
-                "productId": 2,
-                "author": "Dave",
-                "rating": 5,
-                "comment": "Excellent sound quality.",
-                "date": "11-05-2025"
-            }
-        ]
-    },
-    {
+        "productId": 1,
+        "author": "Bob",
+        "rating": 4,
+        "comment": "Worth the price.",
+        "date": "10-05-2025"
+      },
+      {
         "id": 3,
-        "name": "MacBook Air M2",
-        "description": "Apple MacBook Air with M2 chip",
-        "category": [
-            "electronics"
-        ],
-        "price": 1300,
-        "dateAdded": "12-05-2025",
-        "averageRating": 5,
-        "reviews": [
-            {
-                "id": 1,
-                "productId": 3,
-                "author": "Eve",
-                "rating": 5,
-                "comment": "Battery life is amazing.",
-                "date": "12-05-2025"
-            },
-            {
-                "id": 2,
-                "productId": 3,
-                "author": "Frank",
-                "rating": 5,
-                "comment": "Lightweight and fast.",
-                "date": "12-05-2025"
-            }
-        ]
-    },
-    {
+        "rating": "5",
+        "comment": "This is an awsome product",
+        "date": "2025-05-23T02:15:04.075Z"
+      },
+      {
         "id": 4,
-        "name": "Office Chair Ergonomic",
-        "description": "Adjustable desk chair with lumbar support",
-        "category": [
-            "furniture"
-        ],
-        "price": 250,
-        "dateAdded": "13-05-2025",
-        "averageRating": 3,
-        "reviews": [
-            {
-                "id": 1,
-                "productId": 4,
-                "author": "Grace",
-                "rating": 3,
-                "comment": "Comfortable but bulky.",
-                "date": "13-05-2025"
-            }
-        ]
-    },
-    {
-        "id": 5,
-        "name": "Samsung Galaxy S24",
-        "description": "Latest Android smartphone by Samsung",
-        "category": [
-            "electronics"
-        ],
-        "price": 999,
-        "dateAdded": "14-05-2025",
-        "averageRating": 4,
-        "reviews": [
-            {
-                "id": 1,
-                "productId": 5,
-                "author": "Heidi",
-                "rating": 4,
-                "comment": "Super sharp display.",
-                "date": "14-05-2025"
-            },
-            {
-                "id": 2,
-                "productId": 5,
-                "author": "Ivan",
-                "rating": 4,
-                "comment": "Smooth performance.",
-                "date": "14-05-2025"
-            }
-        ]
-    },
-    {
-        "id": 6,
-        "name": "Nike Air Max",
-        "description": "Popular running shoes",
-        "category": [
-            "fashion"
-        ],
-        "price": 120,
-        "dateAdded": "14-05-2025",
-        "averageRating": 4,
-        "reviews": [
-            {
-                "id": 1,
-                "productId": 6,
-                "author": "Judy",
-                "rating": 4,
-                "comment": "Good cushioning.",
-                "date": "14-05-2025"
-            }
-        ]
-    },
-    {
-        "id": 7,
-        "name": "Kindle Paperwhite",
-        "description": "E-reader with backlit display",
-        "category": [
-            "electronics"
-        ],
-        "price": 129,
-        "dateAdded": "15-05-2025",
-        "averageRating": 5,
-        "reviews": [
-            {
-                "id": 1,
-                "productId": 7,
-                "author": "Karl",
-                "rating": 5,
-                "comment": "Perfect for travel.",
-                "date": "15-05-2025"
-            },
-            {
-                "id": 2,
-                "productId": 7,
-                "author": "Leo",
-                "rating": 5,
-                "comment": "Crisp and clear display.",
-                "date": "15-05-2025"
-            }
-        ]
-    },
-    {
-        "id": 8,
-        "name": "HP Pavilion",
-        "description": "Affordable 15.6\" laptop",
-        "category": [
-            "electronics"
-        ],
-        "price": 600,
-        "dateAdded": "15-05-2025",
-        "averageRating": 3,
-        "reviews": [
-            {
-                "id": 1,
-                "productId": 8,
-                "author": "Mia",
-                "rating": 3,
-                "comment": "Affordable, but slow.",
-                "date": "15-05-2025"
-            },
-            {
-                "id": 2,
-                "productId": 8,
-                "author": "Noah",
-                "rating": 3,
-                "comment": "Battery life could be better.",
-                "date": "15-05-2025"
-            }
-        ]
-    },
-    {
-        "id": 9,
-        "name": "Logitech MX Master 3",
-        "description": "Advanced wireless mouse",
-        "category": [
-            "electronics"
-        ],
-        "price": 99,
-        "dateAdded": "16-05-2025",
-        "averageRating": 5,
-        "reviews": [
-            {
-                "id": 1,
-                "productId": 9,
-                "author": "Oscar",
-                "rating": 5,
-                "comment": "Ergonomic and precise.",
-                "date": "16-05-2025"
-            }
-        ]
-    },
-    {
-        "id": 10,
-        "name": "iPad Air",
-        "description": "Apple tablet with M1 chip",
-        "category": [
-            "electronics"
-        ],
-        "price": 799,
-        "dateAdded": "16-05-2025",
-        "averageRating": 5,
-        "reviews": [
-            {
-                "id": 1,
-                "productId": 10,
-                "author": "Pam",
-                "rating": 5,
-                "comment": "Love the M1 chip performance.",
-                "date": "16-05-2025"
-            },
-            {
-                "id": 2,
-                "productId": 10,
-                "author": "Quinn",
-                "rating": 5,
-                "comment": "Very fast and responsive.",
-                "date": "16-05-2025"
-            }
-        ]
-    },
-    {
-        "id": 11,
-        "name": "Gaming Desk",
-        "description": "Large desk with RGB lighting",
-        "category": [
-            "furniture"
-        ],
-        "price": 300,
-        "dateAdded": "17-05-2025",
-        "averageRating": 4,
-        "reviews": [
-            {
-                "id": 1,
-                "productId": 11,
-                "author": "Rick",
-                "rating": 4,
-                "comment": "Solid and wide desk.",
-                "date": "17-05-2025"
-            }
-        ]
-    },
-    {
-        "id": 12,
-        "name": "Apple Watch Series 9",
-        "description": "Smartwatch with fitness tracking",
-        "category": [
-            "electronics"
-        ],
-        "price": 499,
-        "dateAdded": "17-05-2025",
-        "averageRating": 4,
-        "reviews": [
-            {
-                "id": 1,
-                "productId": 12,
-                "author": "Sam",
-                "rating": 4,
-                "comment": "Tracks workouts well.",
-                "date": "17-05-2025"
-            },
-            {
-                "id": 2,
-                "productId": 12,
-                "author": "Tina",
-                "rating": 4,
-                "comment": "Stylish and smart.",
-                "date": "17-05-2025"
-            }
-        ]
-    },
-    {
-        "id": 13,
-        "name": "Mechanical Keyboard",
-        "description": "RGB backlit gaming keyboard",
-        "category": [
-            "electronics"
-        ],
-        "price": 150,
-        "dateAdded": "17-05-2025",
-        "averageRating": 5,
-        "reviews": [
-            {
-                "id": 1,
-                "productId": 13,
-                "author": "Uma",
-                "rating": 5,
-                "comment": "Tactile keys, perfect for typing.",
-                "date": "17-05-2025"
-            }
-        ]
-    },
-    {
-        "id": 14,
-        "name": "Smart LED Bulbs",
-        "description": "WiFi-controlled RGB smart bulbs",
-        "category": [
-            "electronics"
-        ],
-        "price": 30,
-        "dateAdded": "18-05-2025",
-        "averageRating": 4,
-        "reviews": [
-            {
-                "id": 1,
-                "productId": 14,
-                "author": "Victor",
-                "rating": 4,
-                "comment": "Cool lighting effects.",
-                "date": "18-05-2025"
-            }
-        ]
-    },
-    {
-        "id": 15,
-        "name": "Bluetooth Speaker",
-        "description": "Portable waterproof speaker",
-        "category": [
-            "electronics"
-        ],
-        "price": 79,
-        "dateAdded": "18-05-2025",
-        "averageRating": 5,
-        "reviews": [
-            {
-                "id": 1,
-                "productId": 15,
-                "author": "Wendy",
-                "rating": 5,
-                "comment": "Loud and clear sound.",
-                "date": "18-05-2025"
-            }
-        ]
-    },
-    {
-        "id": 16,
-        "name": "Leather Wallet",
-        "description": "Hand-stitched minimalist wallet",
-        "category": [
-            "fashion"
-        ],
-        "price": 45,
-        "dateAdded": "18-05-2025",
-        "averageRating": 4,
-        "reviews": [
-            {
-                "id": 1,
-                "productId": 16,
-                "author": "Xander",
-                "rating": 4,
-                "comment": "Nice leather texture.",
-                "date": "18-05-2025"
-            }
-        ]
-    },
-    {
-        "id": 17,
-        "name": "Surface Laptop 5",
-        "description": "13.5” touchscreen laptop from Microsoft",
-        "category": [
-            "electronics"
-        ],
-        "price": 1100,
-        "dateAdded": "19-05-2025",
-        "averageRating": 4,
-        "reviews": [
-            {
-                "id": 1,
-                "productId": 17,
-                "author": "Yasmin",
-                "rating": 4,
-                "comment": "Touch screen is responsive.",
-                "date": "19-05-2025"
-            },
-            {
-                "id": 2,
-                "productId": 17,
-                "author": "Zack",
-                "rating": 4,
-                "comment": "Keyboard feels great.",
-                "date": "19-05-2025"
-            }
-        ]
-    },
-    {
-        "id": 18,
-        "name": "4K Monitor",
-        "description": "27” 4K UHD monitor with HDR",
-        "category": [
-            "electronics"
-        ],
-        "price": 349,
-        "dateAdded": "19-05-2025",
-        "averageRating": 5,
-        "reviews": [
-            {
-                "id": 1,
-                "productId": 18,
-                "author": "Adam",
-                "rating": 5,
-                "comment": "Crisp resolution.",
-                "date": "19-05-2025"
-            }
-        ]
-    },
-    {
-        "id": 19,
-        "name": "Espresso Machine",
-        "description": "Semi-automatic coffee machine",
-        "category": [
-            "kitchen"
-        ],
-        "price": 299,
-        "dateAdded": "19-05-2025",
-        "averageRating": 5,
-        "reviews": [
-            {
-                "id": 1,
-                "productId": 19,
-                "author": "Bella",
-                "rating": 5,
-                "comment": "Makes great espresso.",
-                "date": "19-05-2025"
-            }
-        ]
-    },
-    {
-        "id": 20,
-        "name": "Wireless Charger",
-        "description": "Fast charging pad compatible with iPhone & Android",
-        "category": [
-            "electronics"
-        ],
-        "price": 40,
-        "dateAdded": "20-05-2025",
-        "averageRating": 4,
-        "reviews": [
-            {
-                "id": 1,
-                "productId": 20,
-                "author": "Carlos",
-                "rating": 4,
-                "comment": "Charges fast and reliably.",
-                "date": "20-05-2025"
-            }
-        ]
-    }
+        "rating": "3",
+        "comment": "Product is good but not good enough",
+        "date": "2025-05-23T02:17:14.613Z"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Sony WH-1000XM5",
+    "description": "Wireless Noise Canceling Headphones",
+    "category": [
+      "electronics"
+    ],
+    "price": 399,
+    "dateAdded": "11-05-2025",
+    "averageRating": 5,
+    "reviews": [
+      {
+        "id": 1,
+        "productId": 2,
+        "author": "Charlie",
+        "rating": 5,
+        "comment": "Best noise cancellation!",
+        "date": "11-05-2025"
+      },
+      {
+        "id": 2,
+        "productId": 2,
+        "author": "Dave",
+        "rating": 5,
+        "comment": "Excellent sound quality.",
+        "date": "11-05-2025"
+      },
+      {
+        "id": 3,
+        "productId": 2,
+        "rating": "4",
+        "comment": "These are really good headsets",
+        "date": "2025-05-23T01:44:56.600Z"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "MacBook Air M2",
+    "description": "Apple MacBook Air with M2 chip",
+    "category": [
+      "electronics"
+    ],
+    "price": 1300,
+    "dateAdded": "12-05-2025",
+    "averageRating": 5,
+    "reviews": [
+      {
+        "id": 1,
+        "productId": 3,
+        "author": "Eve",
+        "rating": 5,
+        "comment": "Battery life is amazing.",
+        "date": "12-05-2025"
+      },
+      {
+        "id": 2,
+        "productId": 3,
+        "author": "Frank",
+        "rating": 5,
+        "comment": "Lightweight and fast.",
+        "date": "12-05-2025"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Office Chair Ergonomic",
+    "description": "Adjustable desk chair with lumbar support",
+    "category": [
+      "furniture"
+    ],
+    "price": 250,
+    "dateAdded": "13-05-2025",
+    "averageRating": 3,
+    "reviews": [
+      {
+        "id": 1,
+        "productId": 4,
+        "author": "Grace",
+        "rating": 3,
+        "comment": "Comfortable but bulky.",
+        "date": "13-05-2025"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Samsung Galaxy S24",
+    "description": "Latest Android smartphone by Samsung",
+    "category": [
+      "electronics"
+    ],
+    "price": 999,
+    "dateAdded": "14-05-2025",
+    "averageRating": 4,
+    "reviews": [
+      {
+        "id": 1,
+        "productId": 5,
+        "author": "Heidi",
+        "rating": 4,
+        "comment": "Super sharp display.",
+        "date": "14-05-2025"
+      },
+      {
+        "id": 2,
+        "productId": 5,
+        "author": "Ivan",
+        "rating": 4,
+        "comment": "Smooth performance.",
+        "date": "14-05-2025"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Nike Air Max",
+    "description": "Popular running shoes",
+    "category": [
+      "fashion"
+    ],
+    "price": 120,
+    "dateAdded": "14-05-2025",
+    "averageRating": 4,
+    "reviews": [
+      {
+        "id": 1,
+        "productId": 6,
+        "author": "Judy",
+        "rating": 4,
+        "comment": "Great cushioning.",
+        "date": "2025-05-23T03:25:12.028Z",
+        "authorName": "Judy"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Kindle Paperwhite",
+    "description": "E-reader with backlit display",
+    "category": [
+      "electronics"
+    ],
+    "price": 129,
+    "dateAdded": "15-05-2025",
+    "averageRating": 5,
+    "reviews": [
+      {
+        "id": 1,
+        "productId": 7,
+        "author": "Karl",
+        "rating": 5,
+        "comment": "Perfect for travel.",
+        "date": "15-05-2025"
+      },
+      {
+        "id": 2,
+        "productId": 7,
+        "author": "Leo",
+        "rating": 5,
+        "comment": "Crisp and clear display.",
+        "date": "15-05-2025"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "HP Pavilion",
+    "description": "Affordable 15.6\" laptop",
+    "category": [
+      "electronics"
+    ],
+    "price": 600,
+    "dateAdded": "15-05-2025",
+    "averageRating": 3,
+    "reviews": [
+      {
+        "id": 1,
+        "productId": 8,
+        "author": "Mia",
+        "rating": 3,
+        "comment": "Affordable, but slow.",
+        "date": "15-05-2025"
+      },
+      {
+        "id": 2,
+        "productId": 8,
+        "author": "Noah",
+        "rating": 3,
+        "comment": "Battery life could be better.",
+        "date": "15-05-2025"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Logitech MX Master 3",
+    "description": "Advanced wireless mouse",
+    "category": [
+      "electronics"
+    ],
+    "price": 99,
+    "dateAdded": "16-05-2025",
+    "averageRating": 5,
+    "reviews": [
+      {
+        "id": 1,
+        "productId": 9,
+        "author": "Oscar",
+        "rating": 5,
+        "comment": "Ergonomic and precise.",
+        "date": "16-05-2025"
+      },
+      {
+        "id": 2,
+        "rating": "5",
+        "productId": 9,
+        "comment": "Its a good product",
+        "date": "2025-05-23T02:01:49.544Z"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "iPad Air",
+    "description": "Apple tablet with M1 chip",
+    "category": [
+      "electronics"
+    ],
+    "price": 799,
+    "dateAdded": "16-05-2025",
+    "averageRating": 5,
+    "reviews": [
+      {
+        "id": 1,
+        "productId": 10,
+        "author": "Pam",
+        "rating": 5,
+        "comment": "Love the M1 chip performance.",
+        "date": "16-05-2025"
+      },
+      {
+        "id": 2,
+        "productId": 10,
+        "author": "Quinn",
+        "rating": 5,
+        "comment": "Very fast and responsive.",
+        "date": "16-05-2025"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Gaming Desk",
+    "description": "Large desk with RGB lighting",
+    "category": [
+      "furniture"
+    ],
+    "price": 300,
+    "dateAdded": "17-05-2025",
+    "averageRating": 4,
+    "reviews": [
+      {
+        "id": 1,
+        "productId": 11,
+        "author": "Rick",
+        "rating": 4,
+        "comment": "Solid and wide desk.",
+        "date": "17-05-2025"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Apple Watch Series 9",
+    "description": "Smartwatch with fitness tracking",
+    "category": [
+      "electronics"
+    ],
+    "price": 499,
+    "dateAdded": "17-05-2025",
+    "averageRating": 4,
+    "reviews": [
+      {
+        "id": 1,
+        "productId": 12,
+        "author": "Sam",
+        "rating": 4,
+        "comment": "Tracks workouts well.",
+        "date": "17-05-2025"
+      },
+      {
+        "id": 2,
+        "productId": 12,
+        "author": "Tina",
+        "rating": 4,
+        "comment": "Stylish and smart.",
+        "date": "17-05-2025"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Mechanical Keyboard",
+    "description": "RGB backlit gaming keyboard",
+    "category": [
+      "electronics"
+    ],
+    "price": 150,
+    "dateAdded": "17-05-2025",
+    "averageRating": 5,
+    "reviews": [
+      {
+        "id": 1,
+        "productId": 13,
+        "author": "Uma",
+        "rating": 5,
+        "comment": "Tactile keys, perfect for typing.",
+        "date": "17-05-2025"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Smart LED Bulbs",
+    "description": "WiFi-controlled RGB smart bulbs",
+    "category": [
+      "electronics"
+    ],
+    "price": 30,
+    "dateAdded": "18-05-2025",
+    "averageRating": 4,
+    "reviews": [
+      {
+        "id": 1,
+        "productId": 14,
+        "author": "Victor",
+        "rating": 4,
+        "comment": "Cool lighting effects.",
+        "date": "18-05-2025"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Bluetooth Speaker",
+    "description": "Portable waterproof speaker",
+    "category": [
+      "electronics"
+    ],
+    "price": 79,
+    "dateAdded": "18-05-2025",
+    "averageRating": 5,
+    "reviews": [
+      {
+        "id": 1,
+        "productId": 15,
+        "author": "Wendy",
+        "rating": 5,
+        "comment": "Loud and clear sound.",
+        "date": "18-05-2025"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Leather Wallet",
+    "description": "Hand-stitched minimalist wallet",
+    "category": [
+      "fashion"
+    ],
+    "price": 45,
+    "dateAdded": "18-05-2025",
+    "averageRating": 4,
+    "reviews": [
+      {
+        "id": 1,
+        "productId": 16,
+        "author": "Xander",
+        "rating": 4,
+        "comment": "Nice leather texture.",
+        "date": "18-05-2025"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Surface Laptop 5",
+    "description": "13.5” touchscreen laptop from Microsoft",
+    "category": [
+      "electronics"
+    ],
+    "price": 1100,
+    "dateAdded": "19-05-2025",
+    "averageRating": 4,
+    "reviews": [
+      {
+        "id": 1,
+        "productId": 17,
+        "author": "Yasmin",
+        "rating": 4,
+        "comment": "Touch screen is responsive.",
+        "date": "19-05-2025"
+      },
+      {
+        "id": 2,
+        "productId": 17,
+        "author": "Zack",
+        "rating": 4,
+        "comment": "Keyboard feels great.",
+        "date": "19-05-2025"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "4K Monitor",
+    "description": "27” 4K UHD monitor with HDR",
+    "category": [
+      "electronics"
+    ],
+    "price": 349,
+    "dateAdded": "19-05-2025",
+    "averageRating": 5,
+    "reviews": [
+      {
+        "id": 1,
+        "productId": 18,
+        "author": "Adam",
+        "rating": 5,
+        "comment": "Crisp resolution.",
+        "date": "19-05-2025"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Espresso Machine",
+    "description": "Semi-automatic coffee machine",
+    "category": [
+      "kitchen"
+    ],
+    "price": 299,
+    "dateAdded": "19-05-2025",
+    "averageRating": 5,
+    "reviews": [
+      {
+        "id": 1,
+        "productId": 19,
+        "author": "Bella",
+        "rating": 5,
+        "comment": "Makes great espresso.",
+        "date": "19-05-2025"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Wireless Charger",
+    "description": "Fast charging pad compatible with iPhone & Android",
+    "category": [
+      "electronics"
+    ],
+    "price": 40,
+    "dateAdded": "20-05-2025",
+    "averageRating": 4,
+    "reviews": [
+      {
+        "id": 1,
+        "productId": 20,
+        "author": "Carlos",
+        "rating": 4,
+        "comment": "Charges fast and reliably.",
+        "date": "20-05-2025"
+      }
+    ]
+  }
 ]

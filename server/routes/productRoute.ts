@@ -1,5 +1,5 @@
 import express from 'express';
-import { getProducts, getProductById, searchProducts, getProductReviews } from '../controllers/productController.ts';
+import { getProducts, getProductById, searchProducts, getProductReviews, addProductReview, updateProductReview, deleteProductReview } from '../controllers/productController.ts';
 import { Review } from '../models/reviews.ts';
 
 
@@ -10,6 +10,11 @@ productRouter.get('/:productId', getProductById);
 
 /**review endpoints**/
 productRouter.get('/:productId/reviews', getProductReviews )
+productRouter.post('/:productId/reviews', addProductReview)
+productRouter.put('/:productId/reviews/:id', updateProductReview)
+productRouter.delete('/:productId/reviews/:id', deleteProductReview)
+
+
 
 
 export default productRouter;
