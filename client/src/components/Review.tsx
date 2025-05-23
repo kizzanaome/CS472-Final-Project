@@ -4,7 +4,7 @@ import { EditReview } from "./EditReview";
 import { useProductContext } from "../context/ProductContext";
 
 type ReviewProp = {
-    productId: string
+    productId: number
     review: ReviewType;
 };
 
@@ -22,6 +22,7 @@ export function Review({ productId, review }: ReviewProp) {
                 method: 'DELETE',
             });
 
+            console.log(response)
             if (!response.ok) {
                 throw new Error('Failed to delete review');
             }

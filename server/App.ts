@@ -1,4 +1,4 @@
-import productRouter from './routes/productRoute.ts';
+import productRouter from './routes/productRoute';
 import express from 'express';
 import type { Request, Response, NextFunction } from 'express';
 import cors from 'cors';

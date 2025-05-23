@@ -11,18 +11,13 @@
     "averageRating": 4,
     "reviews": [
       {
-        "id": 3,
-        "author": "Esther",
-        "rating": "5",
-        "comment": "This is an awsome product",
-        "date": "2025-05-23T02:15:04.075Z"
-      },
-      {
         "id": 4,
         "author": "Norah",
         "rating": "3",
-        "comment": "Product is good but not good enough",
-        "date": "2025-05-23T02:17:14.613Z"
+        "comment": "The product is good, but not good",
+        "date": "2025-05-23T07:56:20.980Z",
+        "authorName": "Norah",
+        "productId": 1
       }
     ]
   },
@@ -52,16 +47,24 @@
       {
         "author": "Grace",
         "rating": "4",
-        "comment": "This macbook is really nice",
-        "date": "2025-05-23T05:55:50.396Z",
-        "id": 1
+        "comment": "This MacBook is really nice. I like it",
+        "date": "2025-05-23T08:15:42.911Z",
+        "id": 1,
+        "authorName": "Grace",
+        "productId": 3
       },
       {
-        "author": "Alice",
+        "rating": "5",
+        "comment": "This is a great prodcut",
+        "date": "2025-05-23T07:33:56.939Z",
+        "id": 3
+      },
+      {
+        "author": "Naume Kizza",
         "rating": 4,
         "comment": "Good Porject.",
-        "date": "2025-05-23T06:10:33.733Z",
-        "id": 2
+        "date": "2025-05-23T08:28:58.430Z",
+        "id": 4
       }
     ]
   },

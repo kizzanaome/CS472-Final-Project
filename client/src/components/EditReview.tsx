@@ -3,7 +3,7 @@ import { useProductContext } from "../context/ProductContext";
 import type { ReviewType } from "../types/ProductInterface";
 
 interface ReviewProps {
-    productId: string | undefined
+    productId: number | undefined
     reviewData: ReviewType;
     setViewEdit: React.MouseEventHandler
 }

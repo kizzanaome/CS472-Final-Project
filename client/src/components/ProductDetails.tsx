@@ -15,7 +15,7 @@ function ProductDetails() {
     const [error, setError] = useState<string | null>(null);
 
     const [reviewData, setReviewData] = useState({
-        authorName: '',
+        author: '',
         rating: '5',
         comment: '',
     });
@@ -55,7 +55,7 @@ function ProductDetails() {
             const data = await response.json();
             console.log('Review submitted:', data);
             alert('Review submitted successfully!');
-            setReviewData({ authorName: '', rating: '5', comment: '' });
+            setReviewData({ author: '', rating: '5', comment: '' });
             fetchProducts()
 
         } catch (err) {
@@ -137,6 +137,7 @@ function ProductDetails() {
                 <h4 className='mb-4'>Product Reviews</h4>
                 <Reviews
                     id={id}
+                    product={product}
                     reviews={product.reviews}
                 />
             </div>}
@@ -147,8 +148,8 @@ function ProductDetails() {
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label htmlFor="author" className="form-label">Name: </label>
-                        <input type="text" className="form-control" id="author" placeholder="Enter your name" name="authorName"
-                            value={reviewData.authorName}
+                        <input type="text" className="form-control" id="author" placeholder="Enter your name" name="author"
+                            value={reviewData.author}
                             onChange={handleInputChange}
                         />
                     </div>
