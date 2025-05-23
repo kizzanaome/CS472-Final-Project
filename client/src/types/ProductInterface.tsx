@@ -12,7 +12,7 @@ export interface ProductInterface {
 }
 
 export type ReviewType = {
-    id: string;
+    id: number;
     productId: string;
     author: string;
     rating: string;

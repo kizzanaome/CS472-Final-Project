@@ -132,7 +132,7 @@ export class Review implements ReviewInterface {
         const reviewIndex = product.reviews.findIndex(r => r.id === reviewId);
         if (reviewIndex === -1) throw new Error("Review not found");
 
-        product.reviews.splice(reviewIndex, 1); // remove review
+        product.reviews.splice(reviewIndex, 1);
         await this.writeProducts(products);
     }
 

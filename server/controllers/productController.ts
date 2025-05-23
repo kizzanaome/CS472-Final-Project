@@ -68,7 +68,7 @@ export const deleteProductReview = async (req: Request, res: Response) => {
     try {
         const { productId, id } = req.params;
         await Review.deleteReview(Number(productId), Number(id));
-        res.status(204).send(); 
+        res.status(200).json({ message: 'Review deleted successfully' });
     } catch (error) {
         res.status(400).json({ error: error instanceof Error ? error.message : 'Delete failed' });
     }

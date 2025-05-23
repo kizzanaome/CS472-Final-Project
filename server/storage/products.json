@@ -11,14 +11,6 @@
     "averageRating": 4,
     "reviews": [
       {
-        "id": 1,
-        "productId": 1,
-        "author": "Alice",
-        "rating": 4,
-        "comment": "Good Porject.",
-        "date": "2025-05-23T03:19:13.493Z"
-      },
-      {
         "id": 2,
         "productId": 1,
         "author": "Bob",
@@ -52,22 +44,6 @@
     "averageRating": 5,
     "reviews": [
       {
-        "id": 1,
-        "productId": 2,
-        "author": "Charlie",
-        "rating": 5,
-        "comment": "Best noise cancellation!",
-        "date": "11-05-2025"
-      },
-      {
-        "id": 2,
-        "productId": 2,
-        "author": "Dave",
-        "rating": 5,
-        "comment": "Excellent sound quality.",
-        "date": "11-05-2025"
-      },
-      {
         "id": 3,
         "productId": 2,
         "rating": "4",
@@ -86,24 +62,7 @@
     "price": 1300,
     "dateAdded": "12-05-2025",
     "averageRating": 5,
-    "reviews": [
-      {
-        "id": 1,
-        "productId": 3,
-        "author": "Eve",
-        "rating": 5,
-        "comment": "Battery life is amazing.",
-        "date": "12-05-2025"
-      },
-      {
-        "id": 2,
-        "productId": 3,
-        "author": "Frank",
-        "rating": 5,
-        "comment": "Lightweight and fast.",
-        "date": "12-05-2025"
-      }
-    ]
+    "reviews": []
   },
   {
     "id": 4,
@@ -136,24 +95,7 @@
     "price": 999,
     "dateAdded": "14-05-2025",
     "averageRating": 4,
-    "reviews": [
-      {
-        "id": 1,
-        "productId": 5,
-        "author": "Heidi",
-        "rating": 4,
-        "comment": "Super sharp display.",
-        "date": "14-05-2025"
-      },
-      {
-        "id": 2,
-        "productId": 5,
-        "author": "Ivan",
-        "rating": 4,
-        "comment": "Smooth performance.",
-        "date": "14-05-2025"
-      }
-    ]
+    "reviews": []
   },
   {
     "id": 6,
@@ -165,17 +107,7 @@
     "price": 120,
     "dateAdded": "14-05-2025",
     "averageRating": 4,
-    "reviews": [
-      {
-        "id": 1,
-        "productId": 6,
-        "author": "Judy",
-        "rating": 4,
-        "comment": "Great cushioning.",
-        "date": "2025-05-23T03:25:12.028Z",
-        "authorName": "Judy"
-      }
-    ]
+    "reviews": []
   },
   {
     "id": 7,
